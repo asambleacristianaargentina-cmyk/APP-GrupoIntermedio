@@ -1,0 +1,54 @@
+body{
+background:#F4F2EC;
+padding:20px;
+}
+
+.versiculo img{
+width:100%;
+border-radius:25px;
+margin-bottom:20px;
+}
+
+.menu-horizontal{
+display:flex;
+gap:20px;
+overflow-x:auto;
+padding-bottom:15px;
+}
+
+.menu-item{
+min-width:90px;
+text-align:center;
+}
+
+.circle{
+width:80px;
+height:80px;
+border-radius:50%;
+background:#E8E6E1;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto;
+}
+
+.circle img{
+width:40px;
+}
+
+.menu-item span{
+display:block;
+margin-top:8px;
+color:#2E5E2E;
+font-weight:600;
+}
+
+.destacados h2{
+color:#2E5E2E;
+}
+
+.destacados img{
+width:100%;
+border-radius:15px;
+margin-top:10px;
+}
