@@ -36,19 +36,28 @@ margin:auto;
 width:60px;
 }
 
-.menu-item span{
-display:block;
+.acerca-home{
+margin:25px 0;
+text-align:center;
+}
+
+.acerca-btn{
+display:flex;
+flex-direction:column;
+align-items:center;
+cursor:pointer;
+}
+
+.acerca-btn img{
+width:70px;
+height:70px;
+border-radius:20px;
+background:#E8E6E1;
+padding:15px;
+}
+
+.acerca-btn span{
 margin-top:8px;
-color:#2E5E2E;
 font-weight:600;
-}
-
-.destacados h2{
 color:#2E5E2E;
-}
-
-.destacados img{
-width:100%;
-border-radius:15px;
-margin-top:10px;
 }
