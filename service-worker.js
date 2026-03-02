@@ -7,6 +7,16 @@ const STATIC_ASSETS=[
 "css/styles.css",
 "css/home.css",
 "css/juegos.css"
+"acerca.html",
+"quienes.html",
+"creemos.html",
+"vision.html",
+"donde.html",
+"css/acerca.css",
+"css/info.css",
+"css/donde.css",
+"js/donde.js",
+"assets/fondo-claro.jpg"
 ];
 
 self.addEventListener("install",event=>{
