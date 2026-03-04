@@ -1,7 +1,7 @@
 body{
 margin:0;
 font-family:Arial,sans-serif;
-background:url("../assets/fondo-claro.jpg") center/cover no-repeat;
+background:url("../assets/fondo-claro.png") center/cover no-repeat;
 min-height:100vh;
 display:flex;
 justify-content:center;
