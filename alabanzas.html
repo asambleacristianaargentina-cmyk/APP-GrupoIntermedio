@@ -1,22 +1,29 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alabanzas</title>
-  <link rel="stylesheet" href="css/alabanzas.css">
-</head>
+const alabanzas = [
+  {
+    id: "alabanza1",
+    titulo: "Te lo debo a Ti"
+  },
+  {
+    id: "alabanza2",
+    titulo: "Necesito de Ti"
+  },
+  {
+    id: "alabanza3",
+    titulo: "Un Milagro"
+  }
+];
 
-<body>
+// Render listado
+const lista = document.getElementById("lista-alabanzas");
 
-  <h1>🎵 Alabanzas</h1>
+alabanzas.forEach(alabanza => {
+  const div = document.createElement("div");
+  div.className = "alabanza-item";
+  div.textContent = alabanza.titulo;
 
-  <div class="contenedor">
-    <div id="lista-alabanzas" class="lista-alabanzas">
-      <!-- Se cargan desde JS -->
-    </div>
-  </div>
+  div.onclick = () => {
+    window.location.href = `alabanza.html?id=${alabanza.id}`;
+  };
 
-  <script src="js/alabanzas.js"></script>
-</body>
-</html>
+  lista.appendChild(div);
+});
