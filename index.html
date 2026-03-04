@@ -6,13 +6,54 @@
 <title>Grupo Intermedio</title>
 
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#1F3F1F">
-<link rel="icon" href="assets/icon-192.png">
+<meta name="theme-color" content="#1F3F7A">
+
+<!-- FUENTES -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/index.css">
 </head>
 
 <body class="inicio">
+
+<div class="logo-container">
+
+<!-- LIBRO SVG -->
+<svg class="logo-libro" viewBox="0 0 200 200">
+
+    <!-- Destellos -->
+    <g stroke="#C8A96A" stroke-width="2">
+        <line x1="100" y1="15" x2="100" y2="35"/>
+        <line x1="50" y1="35" x2="65" y2="50"/>
+        <line x1="150" y1="35" x2="135" y2="50"/>
+        <line x1="30" y1="100" x2="50" y2="100"/>
+        <line x1="170" y1="100" x2="150" y2="100"/>
+    </g>
+
+    <!-- Libro -->
+    <path d="M50 85 Q100 55 150 85 V135 Q100 110 50 135 Z"
+          fill="none"
+          stroke="#1F3F7A"
+          stroke-width="6"/>
+
+    <!-- Línea central -->
+    <line x1="100" y1="75" x2="100" y2="140"
+          stroke="#1F3F7A"
+          stroke-width="5"/>
+</svg>
+
+<h1 class="voz">VOZ JUVENIL</h1>
+
+<h2 class="asamblea">Asamblea Cristiana</h2>
+
+<div class="grupo-linea">
+    <span class="linea"></span>
+    <span class="grupo">GRUPO INTERMEDIO</span>
+    <span class="linea"></span>
+</div>
+
+</div>
 
 <button class="btn-menu" onclick="location.href='home.html'">
 Ingresar
@@ -22,6 +63,10 @@ Ingresar
 if ("serviceWorker" in navigator) {
 navigator.serviceWorker.register("service-worker.js");
 }
+</script>
+
+</body>
+</html>
 </script>
 
 </body>
