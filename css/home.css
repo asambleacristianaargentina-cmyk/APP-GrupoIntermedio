@@ -1,14 +1,18 @@
 body{
 background:#F4F2EC;
 padding:20px;
+margin:0;
+font-family:Inter, sans-serif;
 }
 
+/* VERSICULO */
 .versiculo img{
 width:100%;
 border-radius:25px;
 margin-bottom:20px;
 }
 
+/* BOTONES HORIZONTALES */
 .menu-horizontal{
 display:flex;
 gap:20px;
@@ -33,11 +37,19 @@ margin:auto;
 }
 
 .circle img{
-width:60px;
+width:40px;
 }
 
+.menu-item span{
+display:block;
+margin-top:8px;
+color:#2E5E2E;
+font-weight:600;
+}
+
+/* ACERCA */
 .acerca-home{
-margin:25px 0;
+margin:30px 0;
 text-align:center;
 }
 
@@ -49,8 +61,8 @@ cursor:pointer;
 }
 
 .acerca-btn img{
-width:250px;
-height:150px;
+width:300px;
+height:15px;
 border-radius:20px;
 background:#E8E6E1;
 padding:15px;
@@ -60,4 +72,24 @@ padding:15px;
 margin-top:8px;
 font-weight:600;
 color:#2E5E2E;
+}
+
+/* RADIO */
+.radio-home{
+margin-top:30px;
+text-align:center;
+}
+
+.radio-home h2{
+color:#2E5E2E;
+margin-bottom:15px;
+}
+
+.radio-container{
+max-width:500px;
+margin:auto;
+background:white;
+padding:15px;
+border-radius:15px;
+box-shadow:0 6px 15px rgba(0,0,0,0.15);
 }
