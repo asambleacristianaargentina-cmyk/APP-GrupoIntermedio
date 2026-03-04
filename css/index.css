@@ -1,78 +1,61 @@
-body.inicio{
+body{
+margin:0;
 height:100vh;
 background:url("../assets/fondo-principal.png") center/cover no-repeat;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
+font-family:Arial, sans-serif;
+}
+
+/* CONTENEDOR CENTRAL */
+.hero{
 text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:15px;
 padding:20px;
 }
 
-/* CONTENEDOR */
-.logo-container{
-margin-bottom:40px;
-}
-
 /* LIBRO */
-.logo-libro{
+.logo{
 width:130px;
-margin-bottom:20px;
+margin-bottom:10px;
 }
 
 /* VOZ JUVENIL */
-.voz{
+.titulo{
 font-family:'Cinzel', serif;
 font-weight:700;
 letter-spacing:3px;
+font-size:28px;
 color:#1F3F7A;
 margin:0;
-font-size:32px;
 }
 
 /* Asamblea Cristiana */
-.asamblea{
+.subtitulo{
 font-family:'Great Vibes', cursive;
+font-size:32px;
 color:#1F3F7A;
-font-size:34px;
-margin:10px 0;
+margin:0 0 10px 0;
 }
 
-/* Grupo intermedio con líneas */
-.grupo-linea{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:15px;
+/* BOTÓN AZUL INSTITUCIONAL */
+.btn-ingresar{
 margin-top:10px;
-}
-
-.linea{
-height:2px;
-width:60px;
-background:#C8A96A;
-}
-
-.grupo{
-font-family:'Cinzel', serif;
-letter-spacing:4px;
-color:#8A6B3F;
-font-size:14px;
-}
-
-/* BOTÓN INGRESAR - azul institucional */
-.btn-menu{
-padding:18px 60px;
-font-size:22px;
+padding:16px 60px;
 border:none;
 border-radius:40px;
-background:#1F3F7A;   /* azul institucional */
+font-size:20px;
+background:#1F3F7A;   /* Azul correcto */
 color:white;
-box-shadow:0 8px 20px rgba(0,0,0,0.25);
 cursor:pointer;
-transition:0.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+transition:all 0.3s ease;
 }
 
-.btn-menu:hover{
+.btn-ingresar:hover{
 transform:scale(1.05);
 }
