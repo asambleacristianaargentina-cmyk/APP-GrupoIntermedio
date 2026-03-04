@@ -3,70 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grupo Intermedio</title>
+<title>Voz Juvenil</title>
 
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#1F3F7A">
 
-<!-- FUENTES -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body class="inicio">
+<body>
 
-<div class="logo-container">
+<div class="hero">
 
-<!-- LIBRO SVG -->
-<svg class="logo-libro" viewBox="0 0 200 200">
+<!-- LIBRO MÁS PARECIDO AL ORIGINAL -->
+<svg class="logo" viewBox="0 0 200 180">
 
     <!-- Destellos -->
-    <g stroke="#C8A96A" stroke-width="2">
-        <line x1="100" y1="15" x2="100" y2="35"/>
-        <line x1="50" y1="35" x2="65" y2="50"/>
-        <line x1="150" y1="35" x2="135" y2="50"/>
-        <line x1="30" y1="100" x2="50" y2="100"/>
-        <line x1="170" y1="100" x2="150" y2="100"/>
+    <g stroke="#C8A96A" stroke-width="3" stroke-linecap="round">
+        <line x1="100" y1="5" x2="100" y2="25"/>
+        <line x1="60" y1="20" x2="75" y2="35"/>
+        <line x1="140" y1="20" x2="125" y2="35"/>
+        <line x1="35" y1="60" x2="55" y2="60"/>
+        <line x1="165" y1="60" x2="145" y2="60"/>
     </g>
 
-    <!-- Libro -->
-    <path d="M50 85 Q100 55 150 85 V135 Q100 110 50 135 Z"
+    <!-- Libro abierto -->
+    <path d="M40 60 Q100 25 160 60 V115 Q100 85 40 115 Z"
           fill="none"
           stroke="#1F3F7A"
-          stroke-width="6"/>
+          stroke-width="7"
+          stroke-linejoin="round"/>
 
-    <!-- Línea central -->
-    <line x1="100" y1="75" x2="100" y2="140"
+    <!-- División central -->
+    <line x1="100" y1="45" x2="100" y2="120"
           stroke="#1F3F7A"
-          stroke-width="5"/>
+          stroke-width="6"
+          stroke-linecap="round"/>
 </svg>
 
-<h1 class="voz">VOZ JUVENIL</h1>
+<h1 class="titulo">VOZ JUVENIL</h1>
 
-<h2 class="asamblea">Asamblea Cristiana</h2>
+<h2 class="subtitulo">Asamblea Cristiana</h2>
 
-<div class="grupo-linea">
-    <span class="linea"></span>
-    <span class="grupo">GRUPO INTERMEDIO</span>
-    <span class="linea"></span>
-</div>
-
-</div>
-
-<button class="btn-menu" onclick="location.href='home.html'">
+<button class="btn-ingresar" onclick="location.href='home.html'">
 Ingresar
 </button>
+
+</div>
 
 <script>
 if ("serviceWorker" in navigator) {
 navigator.serviceWorker.register("service-worker.js");
 }
-</script>
-
-</body>
-</html>
 </script>
 
 </body>
