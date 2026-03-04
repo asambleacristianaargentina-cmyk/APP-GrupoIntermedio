@@ -1,29 +1,50 @@
+/* ===============================
+   ESTILO GENERAL
+=================================*/
+
 body{
 margin:0;
-padding:20px;
 font-family:'Inter', sans-serif;
 background:url("../assets/fondo-claro.png") center/cover no-repeat fixed;
 }
 
-/* VERSICULO */
-.versiculo img{
-width:100%;
-border-radius:25px;
-margin-bottom:25px;
+/* Espaciado general */
+section{
+padding:20px;
 }
 
-/* BOTONES HORIZONTALES */
+/* ===============================
+   VERSÍCULO
+=================================*/
+
+.versiculo{
+display:flex;
+justify-content:center;
+}
+
+.versiculo img{
+width:100%;
+max-width:600px;
+border-radius:25px;
+display:block;
+}
+
+/* ===============================
+   BOTONES REDONDOS
+=================================*/
+
 .menu-horizontal{
 display:flex;
 gap:25px;
 overflow-x:auto;
-padding-bottom:20px;
+padding:20px;
 }
 
 .menu-item{
 min-width:95px;
 text-align:center;
 cursor:pointer;
+flex-shrink:0;
 }
 
 .circle{
@@ -54,10 +75,14 @@ font-size:14px;
 transform:scale(1.05);
 }
 
-/* ACERCA */
+/* ===============================
+   ACERCA DE NOSOTROS
+=================================*/
+
 .acerca-home{
-margin:25px 0;
-text-align:center;
+display:flex;
+justify-content:center;
+padding:20px;
 }
 
 .acerca-btn{
@@ -68,18 +93,19 @@ cursor:pointer;
 
 .acerca-img{
 width:100%;
-max-width:350px;
+max-width:360px;
 border-radius:20px;
 display:block;
 }
 
 /* BOTÓN SUPERPUESTO */
+
 .btn-acerca{
 position:absolute;
 bottom:20px;
 left:50%;
 transform:translateX(-50%);
-padding:14px 40px;
+padding:14px 50px;
 border:none;
 border-radius:40px;
 background:#1F3F7A;
@@ -87,7 +113,10 @@ color:white;
 font-family:'Cinzel', serif;
 font-weight:700;
 letter-spacing:1px;
-font-size:16px;
+font-size:15px;
+white-space:nowrap;
+min-width:260px;
+text-align:center;
 box-shadow:0 8px 20px rgba(0,0,0,0.25);
 cursor:pointer;
 transition:0.3s ease;
@@ -97,10 +126,13 @@ transition:0.3s ease;
 transform:translateX(-50%) scale(1.05);
 }
 
-/* RADIO */
+/* ===============================
+   RADIO EN VIVO
+=================================*/
+
 .radio-home{
-margin-top:40px;
 text-align:center;
+padding:30px 20px;
 }
 
 .radio-home h2{
@@ -117,4 +149,5 @@ background:white;
 padding:20px;
 border-radius:20px;
 box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
 }
