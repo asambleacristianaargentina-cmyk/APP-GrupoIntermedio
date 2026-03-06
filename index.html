@@ -1,16 +1,82 @@
 <!DOCTYPE html>
-</body>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grupo Intermedio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+
+<style>
+
+body{
+margin:0;
+padding:0;
+height:100vh;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
+background:url("assets/fondo-principal.png") center/cover no-repeat;
+font-family:'Inter', sans-serif;
+}
+
+/* IMAGEN SUPERIOR */
+
+.portada{
+width:85%;
+max-width:420px;
+margin-bottom:40px;
+}
+
+.portada img{
+width:100%;
+}
+
+/* BOTON INGRESAR */
+
+.btn-ingresar{
+
+background:#1F3F7A;
+color:white;
+
+padding:16px 50px;
+
+border:none;
+border-radius:40px;
+
+font-size:18px;
+font-weight:600;
+
+cursor:pointer;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+transition:transform 0.2s ease;
+}
+
+.btn-ingresar:hover{
+transform:scale(0.97);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="portada">
+<img src="assets/portada.png">
+</div>
+
 <button class="btn-ingresar" onclick="location.href='home.html'">
 Ingresar
 </button>
-
-</div>
-
-<script>
-if ("serviceWorker" in navigator) {
-navigator.serviceWorker.register("service-worker.js");
-}
-</script>
 
 </body>
 </html>
