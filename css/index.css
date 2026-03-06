@@ -8,16 +8,6 @@ align-items:center;
 font-family:Arial, sans-serif;
 }
 
-/* CONTENEDOR CENTRAL */
-.hero{
-text-align:center;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:15px;
-padding:20px;
-}
-
 /* BOTÓN AZUL INSTITUCIONAL */
 .btn-ingresar{
 margin-top:10px;
