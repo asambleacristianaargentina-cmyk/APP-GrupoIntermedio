@@ -18,30 +18,6 @@ gap:15px;
 padding:20px;
 }
 
-/* LIBRO */
-.logo{
-width:130px;
-margin-bottom:10px;
-}
-
-/* VOZ JUVENIL */
-.titulo{
-font-family:'Cinzel', serif;
-font-weight:700;
-letter-spacing:3px;
-font-size:28px;
-color:#1F3F7A;
-margin:0;
-}
-
-/* Asamblea Cristiana */
-.subtitulo{
-font-family:'Great Vibes', cursive;
-font-size:32px;
-color:#1F3F7A;
-margin:0 0 10px 0;
-}
-
 /* BOTÓN AZUL INSTITUCIONAL */
 .btn-ingresar{
 margin-top:10px;
