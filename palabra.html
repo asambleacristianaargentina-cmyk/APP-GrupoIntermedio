@@ -4,6 +4,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Meditación del día</title>
 
 <link rel="stylesheet" href="css/palabra.css">
@@ -17,23 +18,30 @@
 <div class="contenedor">
 
 <!-- VERSÍCULO -->
+
 <div class="recuadro">
+
 <h2>📖 Versículo del día</h2>
 
 <p id="versiculo">
+
 “(18) Y Jesús se acercó y les habló diciendo: Toda potestad me es dada en el cielo y en la tierra. (19) Por tanto, id, y haced discípulos a todas las naciones, bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo; (20) enseñándoles que guarden todas las cosas que os he mandado; y he aquí yo estoy con vosotros todos los días, hasta el fin del mundo. Amén.”
 <br><strong>Mateo 28:18-20</strong>
 </p>
 </div>
 
 <!-- TITULO -->
+
 <div class="recuadro">
+
 <h2 id="titulo-meditacion">
 La Gran Comisión
 </h2>
+
 </div>
 
 <!-- REPRODUCTOR -->
+
 <div class="recuadro reproductor">
 
 <div class="player-header">
@@ -41,7 +49,7 @@ La Gran Comisión
 </div>
 
 <audio id="audio" preload="metadata">
-<source src="assets/audio/meditacion.mp3" type="audio/mpeg">
+<source src="./assets/audio/meditacion.mp3" type="audio/mpeg">
 </audio>
 
 <div class="player-controls">
@@ -58,7 +66,7 @@ La Gran Comisión
 
 <span id="current">0:00</span>
 
-<input type="range" id="progress" value="0" step="1">
+<input type="range" id="progress" value="0" min="0" step="1">
 
 <span id="duration">0:00</span>
 
