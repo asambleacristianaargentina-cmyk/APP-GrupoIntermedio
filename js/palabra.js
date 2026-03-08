@@ -1,29 +1,69 @@
-const audio = document.getElementById("audio");
-const playBtn = document.getElementById("playBtn");
-const progress = document.getElementById("progress");
+const audio = document.getElementById("audio")
 
-playBtn.addEventListener("click", () => {
+const play = document.getElementById("play")
+const back = document.getElementById("back")
+const forward = document.getElementById("forward")
 
-if(audio.paused){
-audio.play();
-playBtn.textContent = "⏸";
-}else{
-audio.pause();
-playBtn.textContent = "▶";
+const progress = document.getElementById("progress")
+
+const current = document.getElementById("current")
+const duration = document.getElementById("duration")
+
+function formatTime(sec){
+
+const minutes = Math.floor(sec/60)
+const seconds = Math.floor(sec%60)
+
+return minutes + ":" + (seconds<10 ? "0"+seconds : seconds)
+
 }
 
-});
+audio.addEventListener("loadedmetadata",()=>{
 
-audio.addEventListener("timeupdate", () => {
+duration.textContent = formatTime(audio.duration)
 
-const percent = (audio.currentTime / audio.duration) * 100;
-progress.value = percent;
+progress.max = audio.duration
 
-});
+})
 
-progress.addEventListener("input", () => {
+play.addEventListener("click",()=>{
 
-const time = (progress.value / 100) * audio.duration;
-audio.currentTime = time;
+if(audio.paused){
 
-});
+audio.play()
+play.textContent="⏸"
+
+}else{
+
+audio.pause()
+play.textContent="▶"
+
+}
+
+})
+
+audio.addEventListener("timeupdate",()=>{
+
+progress.value = audio.currentTime
+
+current.textContent = formatTime(audio.currentTime)
+
+})
+
+progress.addEventListener("input",()=>{
+
+audio.currentTime = progress.value
+
+})
+
+forward.addEventListener("click",()=>{
+
+audio.currentTime += 10
+
+})
+
+back.addEventListener("click",()=>{
+
+audio.currentTime -= 10
+
+})
