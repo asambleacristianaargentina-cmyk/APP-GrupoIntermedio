@@ -20,8 +20,8 @@ padding:20px;
 .membrete{
 display:flex;
 justify-content:center;
-padding-top:30px;
-padding-bottom:10px;
+padding-top:10px;
+padding-bottom:0;
 }
 
 .membrete img{
