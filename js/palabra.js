@@ -9,64 +9,84 @@ const progress = document.getElementById("progress")
 const current = document.getElementById("current")
 const duration = document.getElementById("duration")
 
-/* FORMATEAR TIEMPO */
+let userSeeking = false
+
 
 function formatTime(sec){
 
 if(isNaN(sec)) return "0:00"
 
-const minutes = Math.floor(sec / 60)
-const seconds = Math.floor(sec % 60)
+const m = Math.floor(sec/60)
+const s = Math.floor(sec%60)
 
-return minutes + ":" + (seconds < 10 ? "0"+seconds : seconds)
+return m + ":" + (s<10 ? "0"+s : s)
 
 }
 
-/* CUANDO CARGA EL AUDIO */
+
+/* CARGA DEL AUDIO */
 
 audio.addEventListener("loadedmetadata", ()=>{
 
 duration.textContent = formatTime(audio.duration)
 
-progress.max = audio.duration
+progress.max = Math.floor(audio.duration)
 
 })
 
+
 /* PLAY / PAUSE */
 
-playBtn.addEventListener("click", function(){
+playBtn.addEventListener("click", ()=>{
 
-if (audio.paused) {
+if(audio.paused){
 
-audio.play();
-playBtn.textContent = "⏸";
+audio.play()
+playBtn.textContent="⏸"
 
-} else {
+}else{
 
-audio.pause();
-playBtn.textContent = "▶";
+audio.pause()
+playBtn.textContent="▶"
 
 }
 
-});
+})
+
+
 /* ACTUALIZAR PROGRESO */
 
 audio.addEventListener("timeupdate", ()=>{
 
-progress.value = audio.currentTime
+if(!userSeeking){
+
+progress.value = Math.floor(audio.currentTime)
+
+}
+
 current.textContent = formatTime(audio.currentTime)
 
 })
 
-/* MOVER BARRA */
 
-progress.addEventListener("input", ()=>{
+/* CUANDO USUARIO MUEVE BARRA */
 
-audio.currentTime = progress.value
+progress.addEventListener("mousedown", ()=>{
+
+userSeeking = true
 
 })
 
-/* ADELANTAR 10s */
+progress.addEventListener("mouseup", ()=>{
+
+audio.currentTime = progress.value
+
+userSeeking = false
+
+})
+
+
+/* ADELANTAR */
 
 forwardBtn.addEventListener("click", ()=>{
 
@@ -74,7 +94,8 @@ audio.currentTime += 10
 
 })
 
-/* RETROCEDER 10s */
+
+/* RETROCEDER */
 
 backBtn.addEventListener("click", ()=>{
 
@@ -82,16 +103,11 @@ audio.currentTime -= 10
 
 })
 
-/* CUANDO TERMINA */
 
-audio.addEventListener("ended", function(){
+/* FIN DEL AUDIO */
 
-playBtn.textContent = "▶";
+audio.addEventListener("ended", ()=>{
 
-});
+playBtn.textContent="▶"
 
-
-
-
-
-
+})
