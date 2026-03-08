@@ -50,7 +50,7 @@ flex-shrink:0;
 .circle{
 width:85px;
 height:85px;
-border-radius:10%;
+border-radius:50%;
 background:#E8E6E1;
 display:flex;
 align-items:center;
@@ -60,7 +60,9 @@ transition:0.3s ease;
 }
 
 .circle img{
-width:92px;
+width:75%;        /* ocupa casi todo el círculo */
+height:auto;
+object-fit:contain;
 }
 
 .menu-item span{
