@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meditación del día</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meditación del día</title>
 
-  <link rel="stylesheet" href="css/palabra.css">
+<link rel="stylesheet" href="css/palabra.css">
+
 </head>
 
 <body>
 
-  <h1>🕊️ Meditación del día</h1>
+<h1>🕊️ Meditación del día</h1>
 
-  <div class="contenedor">
+<div class="contenedor">
 
-    <!-- VERSÍCULO -->
-    <div class="recuadro">
-      <h2>📖 Versículo del día</h2>
+<!-- VERSÍCULO -->
+<div class="recuadro">
+<h2>📖 Versículo del día</h2>
 
-      <!-- 👇 ACÁ CAMBIÁS EL VERSÍCULO -->
-      <p id="versiculo">
-        “(18) Y Jesús se acercó y les habló diciendo: Toda potestad me es dada en el cielo y en la tierra. (19) Por tanto, id, y haced discípulos a todas las naciones, bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo; (20) enseñándoles que guarden todas las cosas que os he mandado; y he aquí yo estoy con vosotros todos los días, hasta el fin del mundo. Amén.”  
-        <br><strong>Mateo 28:18-20</strong>
-      </p>
-    </div>
+<p id="versiculo">
+“(18) Y Jesús se acercó y les habló diciendo: Toda potestad me es dada en el cielo y en la tierra. (19) Por tanto, id, y haced discípulos a todas las naciones, bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo; (20) enseñándoles que guarden todas las cosas que os he mandado; y he aquí yo estoy con vosotros todos los días, hasta el fin del mundo. Amén.”
+<br><strong>Mateo 28:18-20</strong>
+</p>
+</div>
 
-    <!-- TÍTULO DE LA MEDITACIÓN -->
-    <div class="recuadro">
-      <!-- 👇 ACÁ CAMBIÁS EL TÍTULO -->
-      <h2 id="titulo-meditacion">
-        La Gran Comisión
-      </h2>
-    </div>
+<!-- TÍTULO -->
+<div class="recuadro">
+<h2 id="titulo-meditacion">
+La Gran Comisión
+</h2>
+</div>
+
+<!-- REPRODUCTOR DE AUDIO -->
+<div class="recuadro reproductor">
+
+<div class="player">
+
+<button id="playBtn">▶</button>
+
+<div class="player-info">
+<div class="track-title">Meditación del día</div>
+<div class="track-sub">Escuchar reflexión</div>
+</div>
+
+</div>
+
+<input type="range" id="progress" value="0">
+
+<audio id="audio">
+<source src="assets/audio/meditacion.mp3" type="audio/mp3">
+</audio>
+
+</div>
 
     <!-- TEXTO DE LA MEDITACIÓN -->
     <div class="recuadro scroll">
