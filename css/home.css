@@ -167,3 +167,20 @@ padding:20px;
 border-radius:20px;
 box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
+
+/* ===============================
+   FINAL DE SECCIÓN
+=================================*/
+
+.final-seccion{
+display:flex;
+justify-content:center;
+padding-top:10px;
+padding-bottom:30px;
+}
+
+.final-seccion img{
+width:100%;
+max-width:420px;
+display:block;
+}
