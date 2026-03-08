@@ -9,86 +9,74 @@ const progress = document.getElementById("progress")
 const current = document.getElementById("current")
 const duration = document.getElementById("duration")
 
-let userSeeking = false
 
+function formatTime(seconds){
 
-function formatTime(sec){
+if(isNaN(seconds)) return "0:00"
 
-if(isNaN(sec)) return "0:00"
+const minutes = Math.floor(seconds / 60)
+const secs = Math.floor(seconds % 60)
 
-const m = Math.floor(sec/60)
-const s = Math.floor(sec%60)
-
-return m + ":" + (s<10 ? "0"+s : s)
+return minutes + ":" + (secs < 10 ? "0"+secs : secs)
 
 }
 
 
 /* CARGA DEL AUDIO */
 
-audio.addEventListener("loadedmetadata", ()=>{
-
-duration.textContent = formatTime(audio.duration)
+audio.addEventListener("loadedmetadata", () => {
 
 progress.max = Math.floor(audio.duration)
+
+duration.textContent = formatTime(audio.duration)
 
 })
 
 
 /* PLAY / PAUSE */
 
-playBtn.addEventListener("click", ()=>{
+playBtn.addEventListener("click", () => {
 
 if(audio.paused){
 
 audio.play()
-playBtn.textContent="⏸"
+
+playBtn.textContent = "⏸"
 
 }else{
 
 audio.pause()
-playBtn.textContent="▶"
+
+playBtn.textContent = "▶"
 
 }
 
 })
 
 
-/* ACTUALIZAR PROGRESO */
+/* ACTUALIZAR BARRA */
 
-audio.addEventListener("timeupdate", ()=>{
-
-if(!userSeeking){
+audio.addEventListener("timeupdate", () => {
 
 progress.value = Math.floor(audio.currentTime)
-
-}
 
 current.textContent = formatTime(audio.currentTime)
 
 })
 
 
-/* CUANDO USUARIO MUEVE BARRA */
+/* MOVER BARRA */
 
-progress.addEventListener("mousedown", ()=>{
-
-userSeeking = true
-
-})
-
-progress.addEventListener("mouseup", ()=>{
+progress.addEventListener("change", () => {
 
 audio.currentTime = progress.value
-
-userSeeking = false
 
 })
 
 
 /* ADELANTAR */
 
-forwardBtn.addEventListener("click", ()=>{
+forwardBtn.addEventListener("click", () => {
 
 audio.currentTime += 10
 
@@ -97,7 +85,7 @@ audio.currentTime += 10
 
 /* RETROCEDER */
 
-backBtn.addEventListener("click", ()=>{
+backBtn.addEventListener("click", () => {
 
 audio.currentTime -= 10
 
@@ -106,8 +94,10 @@ audio.currentTime -= 10
 
 /* FIN DEL AUDIO */
 
-audio.addEventListener("ended", ()=>{
+audio.addEventListener("ended", () => {
 
-playBtn.textContent="▶"
+playBtn.textContent = "▶"
+
+progress.value = 0
 
 })
