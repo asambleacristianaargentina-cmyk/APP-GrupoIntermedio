@@ -34,25 +34,21 @@ progress.max = audio.duration
 
 /* PLAY / PAUSE */
 
-playBtn.addEventListener("click", ()=>{
+playBtn.addEventListener("click", function(){
 
-if(audio.paused){
+if (audio.paused) {
 
-audio.play().then(()=>{
-playBtn.textContent="⏸"
-}).catch(err=>{
-console.log("Error reproducción:",err)
-})
+audio.play();
+playBtn.textContent = "⏸";
 
-}else{
+} else {
 
-audio.pause()
-playBtn.textContent="▶"
+audio.pause();
+playBtn.textContent = "▶";
 
 }
 
-})
-
+});
 /* ACTUALIZAR PROGRESO */
 
 audio.addEventListener("timeupdate", ()=>{
@@ -88,9 +84,14 @@ audio.currentTime -= 10
 
 /* CUANDO TERMINA */
 
-audio.addEventListener("ended", ()=>{
+audio.addEventListener("ended", function(){
 
-playBtn.textContent="▶"
-progress.value = 0
+playBtn.textContent = "▶";
 
-})
+});
+
+
+
+
+
+
